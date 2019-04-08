@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
+	<meta charset="UTF-8">
+	<title>Victor Ascuña</title>
+	<script type="text/javascript">
+		function validacion(){
+			var nombre, contraseña;
+			nombre = document.getElementById("Nickname").value;
+			contraseña = document.getElementById("Password").value;
+			if(nombre == "Victor") {
+				if(contraseña == "201810482") {
+					alert("Se realizo correctamente");
+					return false;
+				} else {
+					alert("Error en el usuario y contraseña!!");
+					return false;
+				}
+			}
+			else {
+				alert("Error en el usuario y contraseña!!");
+				return false;
+			}
+		}
+	</script>
 </head>
-
 <body>
-Content of the document......
+	<div >MyLogin</div>
+	<div><input type="text" name="Nickname" id="Nickname"></div>
+	<div><input type="password" name="Password" id="Password"></div>
+	<div><input type="button" onclick="return validacion()"></div>
 </body>
 
 </html>
